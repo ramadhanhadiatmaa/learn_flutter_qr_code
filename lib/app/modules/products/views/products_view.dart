@@ -81,12 +81,11 @@ class ProductsView extends GetView<ProductsController> {
                                   ],
                                 ),
                               ),
-                              Container(
+                              SizedBox(
                                 height: 50,
                                 width: 50,
                                 child: QrImageView(
-                                  data: "123123123",
-                                  size: 200.0,
+                                  data: product.productId,
                                   version: QrVersions.auto,
                                 ),
                               )
