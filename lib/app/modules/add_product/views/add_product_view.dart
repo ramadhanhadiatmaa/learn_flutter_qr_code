@@ -75,6 +75,11 @@ class AddProductView extends GetView<AddProductController> {
                       "quantity": int.tryParse(qtyC.text) ?? 0,
                     });
                     controller.isLoading(false);
+
+                    Get.back();
+
+                    Get.snackbar(hasil["error"] == true ? "Error" : "Success",
+                        hasil["message"]);
                   } else {
                     Get.snackbar("Error", "Semua data wajib diisi.");
                   }

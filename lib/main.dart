@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, curly_braces_in_flow_control_structures
+// ignore_for_file: curly_braces_in_flow_control_structures
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting)
             return const SplashScreen();
           return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
             title: "QR Code",
             initialRoute: snapshot.hasData ? Routes.home : Routes.login,
             getPages: AppPages.routes,
